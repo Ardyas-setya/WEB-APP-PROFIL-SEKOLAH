@@ -2,7 +2,10 @@ package com.example.afinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowManager;
+
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -26,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         slideModels.add(new SlideModel("https://picsum.photos/200/300/?blur", "Title", ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels, ScaleTypes.CENTER_CROP);
-
-
     }
 
 
