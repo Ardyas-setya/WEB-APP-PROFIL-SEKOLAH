@@ -10,39 +10,69 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="80dp"
+            android:paddingTop="20dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/logo" />
+
             <RelativeLayout
                 android:layout_width="15dp"
-                android:layout_height="match_parent"/>
-            <TextView
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MI MUHAMMADIYAH KALIPEPE"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Berani beda, selangkah lebih maju"
-                android:textColor="@color/white"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:gravity="center"
-                bel/>
+                android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="MI MUHAMMADIYAH KALIPEPE"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Berani beda, selangkah lebih maju"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/header"
+        android:layout_marginTop="79dp"/>
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_period="3000"
+        app:iss_placeholder="@drawable/placeholder"
+        app:iss_error_image="@drawable/error"
+        app:iss_corner_radius="20"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_unselected_dot="@drawable/default_unselected_dot"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
 
 
 
