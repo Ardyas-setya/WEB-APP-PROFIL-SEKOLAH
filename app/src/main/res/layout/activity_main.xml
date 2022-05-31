@@ -83,17 +83,19 @@
                 app:iss_placeholder="@drawable/placeholder"
                 app:iss_selected_dot="@drawable/default_selected_dot"
                 app:iss_unselected_dot="@drawable/default_unselected_dot" />
-            <!-- Main Menu -->
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/slider"
                 android:layout_margin="20dp"
-                android:background="@drawable/footer">
-
+                android:background="@drawable/footer"
+                android:orientation="vertical">
+                <!-- Main Menu -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                     <!--Profile-->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -101,7 +103,6 @@
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -109,7 +110,6 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -118,7 +118,6 @@
                                 android:padding="8dp"
                                 android:src="@drawable/logo" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -126,6 +125,7 @@
                             android:textAlignment="center"
                             android:textSize="12dp" />
                     </LinearLayout>
+
                     <!--Prestasi-->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -133,7 +133,6 @@
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -141,7 +140,6 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -150,7 +148,6 @@
                                 android:padding="8dp"
                                 android:src="@drawable/logo" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -158,6 +155,7 @@
                             android:textAlignment="center"
                             android:textSize="12dp" />
                     </LinearLayout>
+
                     <!--Guru-->
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -165,7 +163,6 @@
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -173,7 +170,6 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -182,7 +178,6 @@
                                 android:padding="8dp"
                                 android:src="@drawable/logo" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -196,14 +191,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp">
-                    <!--Profile-->
+                    <!--Galeri-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -211,7 +205,6 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -220,22 +213,21 @@
                                 android:padding="8dp"
                                 android:src="@drawable/logo" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Profile"
+                            android:text="Galeri"
                             android:textAlignment="center"
                             android:textSize="12dp" />
                     </LinearLayout>
-                    <!--Prestasi-->
+
+                    <!--Ekskul-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -243,7 +235,6 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -252,22 +243,21 @@
                                 android:padding="8dp"
                                 android:src="@drawable/logo" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Prestasi"
+                            android:text="Ekstra Kulikuler"
                             android:textAlignment="center"
                             android:textSize="12dp" />
                     </LinearLayout>
-                    <!--Guru-->
+
+                    <!--Berita-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -275,7 +265,6 @@
                             android:clickable="true"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -284,19 +273,16 @@
                                 android:padding="8dp"
                                 android:src="@drawable/logo" />
                         </LinearLayout>
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tenaga Pendidik"
+                            android:text="Berita"
                             android:textAlignment="center"
                             android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
-
-
+                <!-- End of MainContent-->
             </LinearLayout>
-             <!-- End of MainContent-->
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
