@@ -1,29 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="nav_profile"
-            android:title="Profile"
-            android:icon="@drawable/profile"/>
-        <item
-            android:id="nav_prestasi"
-            android:title="Prestasi"
-            android:icon="@drawable/profile"/>
-        <item
-            android:id="nav_pendidik"
-            android:title="Tenaga Pendidik"
-            android:icon="@drawable/profile"/>
-        <item
-            android:id="nav_galeri"
-            android:title="Galeri"
-            android:icon="@drawable/profile"/>
-        <item
-            android:id="nav_ekskul"
-            android:title="Ekskul"
-            android:icon="@drawable/profile"/>
-        <item
-            android:id="nav_berita"
-            android:title="Berita"
-            android:icon="@drawable/profile"/>
-    </group>
+
 </menu>
