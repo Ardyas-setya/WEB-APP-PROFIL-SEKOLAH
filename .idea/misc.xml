@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/drawable/card_button.xml" value="0.2945" />
+        <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/drawable/footer.xml" value="0.1645" />
         <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/drawable/header.xml" value="0.252" />
-        <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/layout/header.xml" value="0.25" />
         <entry key="..\:/Final/WEB-APP-PROFIL-SEKOLAH/app/src/main/res/menu/main_menu.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/snsv/AndroidStudioProjects/Final/app/src/main/res/layout/activity_splash_screen.xml" value="0.24166666666666667" />
