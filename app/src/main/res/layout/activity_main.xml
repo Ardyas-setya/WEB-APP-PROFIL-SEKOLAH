@@ -112,18 +112,19 @@
                             android:orientation="horizontal">
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:src="@drawable/logo" />
+                                android:padding="20dp"
+                                android:src="@drawable/profile" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Profile"
                             android:textAlignment="center"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
                     <!--Prestasi-->
@@ -145,15 +146,16 @@
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:src="@drawable/logo" />
+                                android:padding="20dp"
+                                android:src="@drawable/prestasi" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Prestasi"
                             android:textAlignment="center"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
                     <!--Guru-->
@@ -175,15 +177,16 @@
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:src="@drawable/logo" />
+                                android:padding="20dp"
+                                android:src="@drawable/guru" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tenaga Pendidik"
                             android:textAlignment="center"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -210,15 +213,16 @@
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:src="@drawable/logo" />
+                                android:padding="20dp"
+                                android:src="@drawable/galeri" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Galeri"
                             android:textAlignment="center"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
                     <!--Ekskul-->
@@ -240,15 +244,16 @@
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:src="@drawable/logo" />
+                                android:padding="20dp"
+                                android:src="@drawable/ekskul" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Ekstra Kulikuler"
                             android:textAlignment="center"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
                     <!--Berita-->
@@ -270,15 +275,16 @@
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
-                                android:padding="8dp"
-                                android:src="@drawable/logo" />
+                                android:padding="20dp"
+                                android:src="@drawable/berita" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Berita"
                             android:textAlignment="center"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
                 </LinearLayout>
                 <!-- End of MainContent-->
