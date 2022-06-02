@@ -14,4 +14,6 @@
     <string name="menu_galeri">Galeri</string>
     <string name="menu_ekskul">Ekstra Kulikuler</string>
     <string name="menu_berita">Berita</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

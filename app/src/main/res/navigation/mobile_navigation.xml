@@ -22,4 +22,22 @@
         android:name="com.example.afinal.ui.guru.GuruFragment"
         android:label="@string/menu_guru"
         tools:layout="@layout/fragment_guru" />
+
+    <fragment
+        android:id="@+id/nav_ekstra"
+        android:name="com.example.afinal.ui.ekstra.EkstraFragment"
+        android:label="@string/menu_ekskul"
+        tools:layout="@layout/fragment_ekstra" />
+
+    <fragment
+        android:id="@+id/nav_berita"
+        android:name="com.example.afinal.ui.berita.BeritaFragment"
+        android:label="@string/menu_berita"
+        tools:layout="@layout/fragment_berita" />
+
+    <fragment
+        android:id="@+id/nav_galeri"
+        android:name="com.example.afinal.ui.galeri.GaleriFragment"
+        android:label="@string/menu_galeri"
+        tools:layout="@layout/fragment_galeri" />
 </navigation>

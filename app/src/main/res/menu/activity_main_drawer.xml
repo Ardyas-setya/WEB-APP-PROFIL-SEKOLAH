@@ -21,7 +21,7 @@
             android:icon="@drawable/galeri"
             android:title="@string/menu_galeri" />
         <item
-            android:id="@+id/nav_ekskul"
+            android:id="@+id/nav_ekstra"
             android:icon="@drawable/ekskul"
             android:title="@string/menu_ekskul" />
         <item
