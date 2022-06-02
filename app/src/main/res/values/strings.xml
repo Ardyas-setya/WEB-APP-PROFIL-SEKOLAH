@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Final</string>
+    <string name="app_name">Profil Sekolah</string>
     <string name="title_activity_drawer">Drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,7 +8,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_prestasi">Prestasi</string>
+    <string name="menu_guru">Tenaga Pendidik</string>
+    <string name="menu_galeri">Galeri</string>
+    <string name="menu_ekskul">Ekstra Kulikuler</string>
+    <string name="menu_berita">Berita</string>
 </resources>
