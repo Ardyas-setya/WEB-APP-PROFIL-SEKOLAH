@@ -148,7 +148,8 @@
                                 android:adjustViewBounds="true"
                                 android:cropToPadding="true"
                                 android:padding="20dp"
-                                android:src="@drawable/prestasi" />
+                                android:src="@drawable/prestasi"
+                                android:id="@+id/imagePrestasi"/>/>
                         </LinearLayout>
                         <TextView
                             android:layout_width="match_parent"

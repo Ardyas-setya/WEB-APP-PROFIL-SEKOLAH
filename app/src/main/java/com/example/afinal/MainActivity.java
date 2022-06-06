@@ -12,11 +12,15 @@ import android.widget.ImageView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.afinal.ui.prestasi.PrestasiFragment;
+import com.example.afinal.ui.prestasi.PrestasiViewModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public ImageView imgProfile;
+    public ImageView imgPrestasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageSlider.setImageList(slideModels, ScaleTypes.CENTER_CROP);
 
         imgProfile = (ImageView) findViewById(R.id.imageProfile);
+        imgPrestasi = (ImageView) findViewById(R.id.imagePrestasi);
 
         imgProfile.setOnClickListener(this);
+        imgPrestasi.setOnClickListener(this);
     }
 
 
@@ -46,6 +52,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.imageProfile:
                 i = new Intent(this,DrawerActivity.class);
+                startActivity(i);
+                break;
+
+            case R.id.imagePrestasi:
+                i = new Intent(this, PrestasiViewModel.class);
                 startActivity(i);
                 break;
         }
