@@ -14,18 +14,19 @@ class myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: Future.delayed(Duration(seconds: 4)),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return SplashScreen();
-          } else
-            return GetMaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: "Application",
-              initialRoute: Routes.HOME,
-              getPages: AppPages.routes,
-            );
-        });
+    // return FutureBuilder(
+    //     future: Future.delayed(Duration(seconds: 4)),
+    //     builder: (context, snapshot) {
+    //       if (snapshot.connectionState == ConnectionState.waiting) {
+    //         return SplashScreen();
+    //       } else
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Application",
+      initialRoute: Routes.TWO,
+      getPages: AppPages.routes,
+    );
   }
+  // );
 }
+// }

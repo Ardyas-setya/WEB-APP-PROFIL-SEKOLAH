@@ -78,21 +78,50 @@ class OneView extends GetView<OneController> {
               Row(
                 children: [
                   Container(
+                    padding: EdgeInsets.only(left: 5, top: 5),
                     width: 50,
                     height: 100,
-                    color: Colors.amber,
+                    color: Color(0xff15477A),
                     child: Text(
-                      'maps',
-                      style: TextStyle(fontSize: 20),
+                      'Contact Us',
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
+                  SizedBox(
+                    width: 5,
+                  ),
                   Container(
-                    width: 50,
+                    width: 280,
                     height: 100,
-                    color: Colors.amber,
-                    child: Text(
-                      'maps',
-                      style: TextStyle(fontSize: 20),
+                    // color: Colors.amber,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Jl. Mayjen soekertiyo Gg. Masjid Baiturrahman Kalipepe, kec. Yosowilangun kab. Lumajang',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w300),
+                        ),
+                        Text(
+                          '67382',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w300),
+                        ),
+                        Text(
+                          '+62 852-3620-3088',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w300),
+                        ),
+                        Text(
+                          'mimuhammadiyahkalipepe2017@gmail.com',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w300),
+                        ),
+                      ],
                     ),
                   ),
                 ],

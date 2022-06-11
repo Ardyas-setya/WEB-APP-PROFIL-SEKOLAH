@@ -1,198 +1,96 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-import 'package:get/get.dart';
+class TwoView extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
 
-import '../controllers/two_controller.dart';
+class _MyHomePageState extends State<TwoView> {
+  Future<List<User>> _getUsers() async {
+    var data = await http
+        .get("https://json-generator.com/api/json/get/cfwZmvEBbC?indent=2");
 
-class TwoView extends GetView<TwoController> {
+    var jsonData = json.decode(data.body);
+
+    List<User> users = [];
+
+    for (var u in jsonData) {
+      User user =
+          User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
+
+      users.add(user);
+    }
+
+    print(users.length);
+
+    return users;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff15477A),
-        title: Text('Prestasi'),
-        centerTitle: true,
-      ),
-      body: GridView.count(
-        padding: const EdgeInsets.all(15),
-        crossAxisCount: 3,
-        children: <Widget>[
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: Color(0xff15477A),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Image(image: AssetImage("assets/icon/home.png")),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Home",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-            ),
+    return new Scaffold(
+      appBar: new AppBar(
+          // title: new Text(widget.title),
           ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: Color(0xff15477A),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Image(image: AssetImage("assets/icon/trophy.png")),
-                    SizedBox(
-                      height: 5,
+      body: Container(
+        child: FutureBuilder(
+          future: _getUsers(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            print(snapshot.data);
+            if (snapshot.data == null) {
+              return Container(child: Center(child: Text("Loading...")));
+            } else {
+              return ListView.builder(
+                itemCount: snapshot.data.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    leading: CircleAvatar(
+                      backgroundImage:
+                          NetworkImage(snapshot.data[index].picture),
                     ),
-                    Text(
-                      "Prestasi",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: Color(0xff15477A),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Image(image: AssetImage("assets/icon/people.png")),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Pendidik",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: Color(0xff15477A),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Image(image: AssetImage("assets/icon/galery.png")),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Galery",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: Color(0xff15477A),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Image(image: AssetImage("assets/icon/ball.png")),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Ekstra",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: Color(0xff15477A),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Image(image: AssetImage("assets/icon/berita.png")),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Berita",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          )
-        ],
+                    title: Text(snapshot.data[index].name),
+                    subtitle: Text(snapshot.data[index].email),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) =>
+                                  DetailPage(snapshot.data[index])));
+                    },
+                  );
+                },
+              );
+            }
+          },
+        ),
       ),
     );
   }
+}
+
+class DetailPage extends StatelessWidget {
+  final User user;
+
+  DetailPage(this.user);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+      title: Text(user.name),
+    ));
+  }
+}
+
+class User {
+  final int index;
+  final String about;
+  final String name;
+  final String email;
+  final String picture;
+
+  User(this.index, this.about, this.name, this.email, this.picture);
 }

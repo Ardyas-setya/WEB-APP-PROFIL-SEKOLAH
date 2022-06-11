@@ -10,6 +10,7 @@ dependencies:
   get: 4.6.5
   carousel_slider: ^4.1.1
   sidebarx: ^0.4.0
+  http: ^0.13.4
   flutter: 
     sdk: flutter
     
