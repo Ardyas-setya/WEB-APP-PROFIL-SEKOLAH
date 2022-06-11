@@ -9,7 +9,8 @@ class TwoView extends GetView<TwoController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TwoView'),
+        backgroundColor: Color(0xff15477A),
+        title: Text('Prestasi'),
         centerTitle: true,
       ),
       body: GridView.count(

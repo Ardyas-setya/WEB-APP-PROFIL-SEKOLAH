@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
+import 'package:mi_kalipepe/app/modules/five/views/five_view.dart';
+import 'package:mi_kalipepe/app/modules/four/views/four_view.dart';
 import 'package:mi_kalipepe/app/modules/one/views/one_view.dart';
+import 'package:mi_kalipepe/app/modules/six/views/six_view.dart';
+import 'package:mi_kalipepe/app/modules/three/views/three_view.dart';
 import 'package:mi_kalipepe/app/modules/two/views/two_view.dart';
 
 import '../controllers/home_controller.dart';
@@ -190,7 +194,13 @@ class HomeView extends GetView<HomeController> {
                         color: Color(0xff15477A),
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TwoView()),
+                            );
+                          },
                           splashColor: Colors.blue,
                           child: Center(
                             child: Column(
@@ -221,7 +231,13 @@ class HomeView extends GetView<HomeController> {
                         color: Color(0xff15477A),
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ThreeView()),
+                            );
+                          },
                           splashColor: Colors.blue,
                           child: Center(
                             child: Column(
@@ -252,7 +268,13 @@ class HomeView extends GetView<HomeController> {
                         color: Color(0xff15477A),
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FourView()),
+                            );
+                          },
                           splashColor: Colors.blue,
                           child: Center(
                             child: Column(
@@ -283,7 +305,13 @@ class HomeView extends GetView<HomeController> {
                         color: Color(0xff15477A),
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FiveView()),
+                            );
+                          },
                           splashColor: Colors.blue,
                           child: Center(
                             child: Column(
@@ -313,7 +341,13 @@ class HomeView extends GetView<HomeController> {
                         color: Color(0xff15477A),
                         margin: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SixView()),
+                            );
+                          },
                           splashColor: Colors.blue,
                           child: Center(
                             child: Column(
