@@ -1,20 +1,40 @@
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+
+import '../widgets/four.dart';
 
 class FourController extends GetxController {
-  //TODO: Implement FourController
+  RxInt indexWidget = 0.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void changeIndexBottomNav(int index) {
+    indexWidget.value = index;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+  List<Widget> myWidgets = [
+    HomeWidget(),
+    Center(
+      child: Text(
+        'Search',
+        style: TextStyle(fontSize: 20),
+      ),
+    ),
+    Center(
+      child: Text(
+        'Reels',
+        style: TextStyle(fontSize: 20),
+      ),
+    ),
+    Center(
+      child: Text(
+        'Shop',
+        style: TextStyle(fontSize: 20),
+      ),
+    ),
+    Center(
+      child: Text(
+        'Profile',
+        style: TextStyle(fontSize: 20),
+      ),
+    ),
+  ];
 }
