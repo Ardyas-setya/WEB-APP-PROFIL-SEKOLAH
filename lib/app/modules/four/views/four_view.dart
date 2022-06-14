@@ -8,51 +8,16 @@ class FourView extends GetView<FourController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
-        () => controller.myWidgets.elementAt(controller.indexWidget.value),
+      appBar: AppBar(
+        backgroundColor: Color(0xff15477A),
+        title: Text('Galery'),
+        centerTitle: true,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        onTap: (value) => controller.changeIndexBottomNav(value),
-        items: [
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(
-              Icons.home_outlined,
-              color: Colors.black,
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(
-              Icons.video_collection_outlined,
-              color: Colors.black,
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(
-              Icons.shop_outlined,
-              color: Colors.black,
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: Icon(
-              Icons.person,
-              color: Colors.black,
-            ),
-          ),
-        ],
+      body: Center(
+        child: Text(
+          'FourView is working',
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }

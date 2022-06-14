@@ -15,9 +15,6 @@ class HomeView extends GetView<HomeController> {
     'https://www.google.com/maps/uv?pb=!1s0x2dd663e6747aba43:0x179c7403b7772d94!3m1!7e115!4shttps://lh5.googleusercontent.com/p/AF1QipO6vAXRDtjz5AvYRVR0Fgjd8OqLZvfvNdywjZeu%3Dw260-h175-n-k-no!5smi+kalipepe+-+Google+Search!15zQ2dJZ0FRPT0&imagekey=!1e10!2sAF1QipO6vAXRDtjz5AvYRVR0Fgjd8OqLZvfvNdywjZeu&hl=en',
     'https://www.google.com/maps/uv?pb=!1s0x2dd663e6747aba43%3A0x179c7403b7772d94!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO-f4XJjL0LIV__2TK7qG6u3MqVHSEpbufi13LG%3Dw86-h87-n-k-no!5smi%20kalipepe%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipO-f4XJjL0LIV__2TK7qG6u3MqVHSEpbufi13LG&hl=en#',
     'https://www.google.com/maps/uv?pb=!1s0x2dd663e6747aba43%3A0x179c7403b7772d94!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipO-f4XJjL0LIV__2TK7qG6u3MqVHSEpbufi13LG%3Dw86-h87-n-k-no!5smi%20kalipepe%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipNuGad47B-ez5-nXJFJBvMp1lAga0wEOoASy_ee&hl=en#',
-    'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
-    'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
-    'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
   ];
 
   @override

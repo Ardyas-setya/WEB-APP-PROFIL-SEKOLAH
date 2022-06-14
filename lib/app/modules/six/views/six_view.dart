@@ -1,24 +1,105 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
+void main() {
+  runApp(const SixView());
+}
 
-import '../controllers/six_controller.dart';
+class SixView extends StatefulWidget {
+  const SixView({Key? key}) : super(key: key);
 
-class SixView extends GetView<SixController> {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<SixView> {
+  //_get berfungsi untuk menampung data dari internet nanti
+  List _get = [];
+  var apikey = '98c272f55873473dba1df5af55730edd';
+
+  @override
+  void initState() {
+    // ignore: todo
+    // TODO: implement initState
+    super.initState();
+    _getData();
+  }
+
+  //method untuk merequest/mengambil data dari internet
+  Future _getData() async {
+    try {
+      final response = await http.get(Uri.parse(
+          "https://newsapi.org/v2/top-headlines?country=id&category=business&apiKey=${apikey}"));
+
+      // cek apakah respon berhasil
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+
+        setState(() {
+          //memasukan data yang di dapat dari internet ke variabel _get
+          _get = data['articles'];
+        });
+      }
+    } catch (e) {
+      //tampilkan error di terminal
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff15477A),
-        title: Text('Berita Terkini'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'SixView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+    return MaterialApp(
+      //menghilangkan debug label
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+
+          //membuat appbar dengan background putih dan membuat tulisan di tengah
+          appBar: AppBar(
+            backgroundColor: Color(0xff15477A),
+            title: Text(' Berita'),
+            centerTitle: true,
+          ),
+          body: ListView.builder(
+            // itemcount adalah total panjang data yang ingin ditampilkan
+            // _get.length adalah total panjang data dari data berita yang diambil
+            itemCount: _get.length,
+
+            // itembuilder adalah bentuk widget yang akan ditampilkan, wajib menggunakan 2 parameter.
+            itemBuilder: (context, index) {
+              //padding digunakan untuk memberikan jarak bagian atas listtile agar tidak terlalu mepet
+              //menggunakan edgeInsets.only untuk membuat jarak hanya pada bagian atas saja
+              return Padding(
+                padding: const EdgeInsets.only(
+                  top: 20,
+                ),
+
+                //listtile adalah widget yang disediakan flutter berisi 3 properti yang kita pakai
+                //properti: leading, title, dan subtitle. di dalam setiap properti kalian bebas melakukan customisasi
+                child: ListTile(
+                  leading: Image.network(
+                    //menampilkan data gamabr
+                    _get[index]['urlToImage'] ??
+                        "https://cdn.pixabay.com/photo/2018/03/17/20/51/white-buildings-3235135__340.jpg",
+                    fit: BoxFit.cover,
+                    width: 100,
+                  ),
+                  title: Text(
+                    //menampilkan data judul
+                    _get[index]['title'] ?? "No Title",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  subtitle: Text(
+                    //menampilkan deskripsi berita
+                    _get[index]['description'] ?? "No Description",
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              );
+            },
+          )),
     );
   }
 }
